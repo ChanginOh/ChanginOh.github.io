@@ -22,6 +22,11 @@ body {
   line-height: 1.65;
 }
 
+
+/* =========================================================
+   Header
+   ========================================================= */
+
 .site-header {
   background: linear-gradient(135deg, var(--accent-dark), var(--accent));
   color: #fff;
@@ -77,6 +82,11 @@ body {
   font-size: 1.05rem;
 }
 
+
+/* =========================================================
+   Navigation
+   ========================================================= */
+
 .nav-wrap {
   background: #ffffff;
   border-bottom: 1px solid var(--line);
@@ -114,6 +124,11 @@ body {
   color: var(--accent);
 }
 
+
+/* =========================================================
+   Main layout
+   ========================================================= */
+
 .container {
   max-width: var(--max-width);
   margin: 28px auto 50px;
@@ -127,6 +142,15 @@ body {
   align-items: start;
 }
 
+.main-column {
+  min-width: 0;
+}
+
+
+/* =========================================================
+   Cards
+   ========================================================= */
+
 .card {
   background: var(--paper);
   border: 1px solid var(--line);
@@ -138,6 +162,36 @@ body {
 .card + .card {
   margin-top: 20px;
 }
+
+/* Slightly larger gap between Welcome and cartoon */
+.main-column .card + .card {
+  margin-top: 24px;
+}
+
+
+/* =========================================================
+   Homepage cartoon
+   ========================================================= */
+
+.cartoon-card {
+  padding: 16px;
+}
+
+.homepage-cartoon {
+  margin: 0;
+}
+
+.homepage-cartoon img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 7px;
+}
+
+
+/* =========================================================
+   Headings and text
+   ========================================================= */
 
 h2,
 h3 {
@@ -170,6 +224,11 @@ p {
   color: var(--muted);
 }
 
+
+/* =========================================================
+   Lists
+   ========================================================= */
+
 .news-list,
 .plain-list,
 .pub-list {
@@ -186,6 +245,11 @@ p {
 .pub-list strong {
   color: #111827;
 }
+
+
+/* =========================================================
+   Tags
+   ========================================================= */
 
 .tag-list {
   display: flex;
@@ -204,6 +268,11 @@ p {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.85rem;
 }
+
+
+/* =========================================================
+   Profile
+   ========================================================= */
 
 .profile-box {
   text-align: center;
@@ -224,6 +293,11 @@ p {
   white-space: nowrap;
 }
 
+
+/* =========================================================
+   Featured note
+   ========================================================= */
+
 .featured-note {
   display: block;
   margin-top: 5px;
@@ -231,6 +305,11 @@ p {
   font-size: 0.82rem;
   line-height: 1.4;
 }
+
+
+/* =========================================================
+   Buttons
+   ========================================================= */
 
 .button-row {
   display: flex;
@@ -257,6 +336,77 @@ p {
   border: 1px solid var(--line);
 }
 
+
+
+/* =========================================================
+   Software
+   ========================================================= */
+
+.software-list {
+  margin-top: 18px;
+}
+
+.software-item {
+  padding: 8px 0 28px;
+  border-top: none;
+}
+
+.software-item + .software-item {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+}
+
+.software-item:last-child {
+  padding-bottom: 4px;
+}
+
+.software-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 10px;
+}
+
+.software-heading h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.software-type {
+  flex-shrink: 0;
+  color: var(--muted);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.software-item p {
+  max-width: 820px;
+  margin-bottom: 14px;
+}
+
+/* .software-tags {
+  margin: 0;
+} */
+
+.software-links {
+  margin-top: 16px;
+}
+
+.software-links .button {
+  padding: 8px 13px;
+  font-size: 0.86rem;
+}
+
+
+/* =========================================================
+   Tables
+   ========================================================= */
+
 .info-table {
   width: 100%;
   border-collapse: collapse;
@@ -275,6 +425,11 @@ p {
   color: var(--accent-dark);
 }
 
+
+/* =========================================================
+   Footer
+   ========================================================= */
+
 .footer {
   border-top: 1px solid var(--line);
   background: #ffffff;
@@ -289,7 +444,13 @@ p {
   padding: 18px 20px;
 }
 
+
+/* =========================================================
+   Mobile
+   ========================================================= */
+
 @media (max-width: 760px) {
+
   .page-grid {
     grid-template-columns: 1fr;
   }
@@ -328,4 +489,19 @@ p {
   .university-name {
     white-space: normal;
   }
+
+  .cartoon-card {
+    padding: 10px;
+  }
+
+
+  .software-heading {
+    display: block;
+  }
+
+  .software-type {
+    display: block;
+    margin-top: 5px;
+  }
+
 }
